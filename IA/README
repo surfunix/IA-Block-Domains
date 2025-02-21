@@ -1,0 +1,20 @@
+Criar um código Python para primeiramente carregar o conteúdo do arquivo "base_testadores/testadores_raw" assimundo qu
+e esses domínios de internet já estão bloqueados. Próximo passo é ler o conteúdo de todos os arquivos PDF que estão de
+ntro do diretório "repository" e buscar por domínios novos que ainda não estão listados dentro do arquivo "base_testad
+ores/testadores_raw" e lista-los para que possa ser incluído na lista de bloqueio. Importante é ter uma lista de domín
+ios do time WhiteList, ou seja, mesmo tendo em algum arquivo, estarão numa lista no qual não devem ser considerados co
+mo por exemplo "policiacivil.pe.gov.br" e "mj.gov.br". dentro destes documentos entende-se por domínio qualquer ítem q
+ue possua algo antes e depois de um "." sem que tenha um espaço depois deste ponto para ser mais espeçifico.    
+
+
+RUN:
+
+# python megaexpress_search_new_domains.py 
+
+CHECK:
+
+# wc -l new_domains 
+
+AGGREGATE:
+
+# cat new_domains >> ../testadores_raw
